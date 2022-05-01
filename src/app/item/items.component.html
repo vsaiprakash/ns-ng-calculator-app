@@ -2,8 +2,8 @@
 
 <GridLayout columns="*, *, *, *" rows="*, *, *, *, *" 
     borderColor="white" borderWidth="2px" borderRadius="300px">
-  <Label id="resultBox" text="1234567890" row="0" col="0" colSpan="4" backgroundColor={{resultColor}} margin={{customMargin}} 
-      borderRadius={{customBorderRadius}}></Label>
+  <TextField id="resultBox" [(ngModel)]='this.resultScreen' row="0" col="0" colSpan="4" margin={{customMargin}} 
+      borderRadius={{customBorderRadius}}></TextField>
 
   <Button id="seven" text="7" row="1" col="0" backgroundColor={{cellColor1}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
@@ -36,6 +36,6 @@
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
   <Button id="equal" text="=" row="4" col="1" colSpan="2" backgroundColor={{equalBtnColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
-  <Button id="clear" text="C" row="4" col="3" backgroundColor={{clearColor}} 
+  <Button id="clear" text="C" row="4" col="3" backgroundColor={{clearColor}}
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 </GridLayout>

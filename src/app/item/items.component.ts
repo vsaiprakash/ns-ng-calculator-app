@@ -20,6 +20,8 @@ export class ItemsComponent implements OnInit {
   customMargin: string = "2";
   customBorderRadius: string = "30px";
 
+  resultScreen: string = "";
+
   constructor() {}
 
   ngOnInit(): void {
@@ -28,6 +30,11 @@ export class ItemsComponent implements OnInit {
   onTap(args: EventData) {
     let button = args.object as Button;
     // execute your custom logic here...
-    console.log(args.eventName);
+    console.log(button.text);
+    this.resultScreen = this.resultScreen + button.text;
+    console.log(this.resultScreen);
+    if(button.text=='C' || button.text=='='){
+      this.resultScreen = "";
+    }
 }
 }
