@@ -34,8 +34,10 @@
 
   <Button id="zero" text="0" row="4" col="0" backgroundColor={{cellColor4}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
-  <Button id="equal" text="=" row="4" col="1" colSpan="2" backgroundColor={{equalBtnColor}} 
+  <Button id="equal" text="=" row="4" col="1" backgroundColor={{equalBtnColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
-  <Button id="clear" text="C" row="4" col="3" backgroundColor={{clearColor}}
+  <Button id="clear" text="C" row="4" col="2" backgroundColor={{clearColor}}
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="divide" text="÷" row="4" col="3" backgroundColor={{cellColor4}}
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 </GridLayout>

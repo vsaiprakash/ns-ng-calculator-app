@@ -31,14 +31,27 @@ export class CalculatorComponent implements OnInit {
   onTap(args: EventData) {
     let button = args.object as Button;
     // execute your custom logic here...
-    if(button.text=='C'){
-      this.resultScreen = "";
+    switch(button.text){
+      case 'C':
+        this.resultScreen = "";
+        break;
+      case '=':
+        this.resultScreen = this.calculator.calculate(this.resultScreen);
+        break;
+      default:
+        console.log(button.text);
+        this.resultScreen = this.resultScreen + button.text;
+        console.log(this.resultScreen);
+        break;
     }
-    if(button.text=='='){
-      this.resultScreen = this.calculator.calculate(this.resultScreen);
-    }
-    console.log(button.text);
-    this.resultScreen = this.resultScreen + button.text;
-    console.log(this.resultScreen);
+    // if(button.text=='C'){
+    //   this.resultScreen = "";
+    // }
+    // if(button.text=='='){
+    //   this.resultScreen = this.calculator.calculate(this.resultScreen);
+    // }
+    // console.log(button.text);
+    // this.resultScreen = this.resultScreen + button.text;
+    // console.log(this.resultScreen);
 }
 }
