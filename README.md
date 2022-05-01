@@ -8,3 +8,4 @@ Tested on Virtual Android Device
 
 <img width="253" alt="image" src="https://user-images.githubusercontent.com/9028439/166154692-bce12087-b184-4876-9937-2108389f39f0.png">
 
+Latest APK file available at: https://github.com/vsaiprakash/ns-ng-calculator-app/blob/main/apk/CalculatorApp.apk
