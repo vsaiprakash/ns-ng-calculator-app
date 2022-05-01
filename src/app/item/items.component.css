@@ -1,0 +1,15 @@
+Label {
+    text-align: center;
+}
+
+#resultBox {
+    text-align: right;
+}
+
+#equalBox {
+    text-align: left;
+}
+
+Label:hover , Label:checked {
+    background-color: green;
+}

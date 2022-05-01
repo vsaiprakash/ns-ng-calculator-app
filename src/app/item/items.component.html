@@ -10,7 +10,7 @@ So you can still use template expressions, bindings, templates as well as all th
 The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
 http://docs.nativescript.org/ui/action-bar
 -->
-<ActionBar title="My App"> </ActionBar>
+<ActionBar title="Calculator App"> </ActionBar>
 
 <!--
 The GridLayout arranges its child elements in a table structure of rows and columns.
@@ -22,7 +22,7 @@ These components make use of the NativeScript core theme, which styles them with
 The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
 You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
 -->
-<GridLayout>
+<!-- <GridLayout>
   <ListView [items]="items">
     <ng-template let-item="item">
       <StackLayout [nsRouterLink]="['/item', item.id]">
@@ -30,4 +30,43 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
       </StackLayout>
     </ng-template>
   </ListView>
+</GridLayout> -->
+
+<GridLayout columns="*, *, *, *" rows="*, *, *, *, *" 
+    borderColor="white" borderWidth="2px" borderRadius="300px">
+  <Label id="resultBox" text="1234567890" row="0" col="0" colSpan="4" backgroundColor={{resultColor}} margin={{customMargin}} 
+      borderRadius={{customBorderRadius}}></Label>
+  <!-- <TextField row="0" col="0" colSpan="4" disabled></TextField> -->
+
+  <Label text="7" row="1" col="0" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="8" row="1" col="1" backgroundColor={{cellColor}}
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="9" row="1" col="2" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="x" row="1" col="3" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+
+  <Label text="4" row="2" col="0" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="5" row="2" col="1" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="6" row="2" col="2" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="-" row="2" col="3" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+
+  <Label text="1" row="3" col="0" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="2" row="3" col="1" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="3" row="3" col="2" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label text="+" row="3" col="3" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+
+  <Label text="0" row="4" col="0" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Label id="equalBox" text="=" row="4" col="1" colSpan="3" backgroundColor={{cellColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
 </GridLayout>
