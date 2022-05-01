@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Button, EventData } from '@nativescript/core';
-import { CalculatorService } from './calculator.service';
+import stringCalculator from 'string-calculator'
 
 @Component({
   selector: 'ns-calculator',
@@ -23,7 +23,7 @@ export class CalculatorComponent implements OnInit {
 
   resultScreen: string = "";
 
-  constructor(private calculator: CalculatorService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
@@ -36,22 +36,17 @@ export class CalculatorComponent implements OnInit {
         this.resultScreen = "";
         break;
       case '=':
-        this.resultScreen = this.calculator.calculate(this.resultScreen);
+        this.resultScreen = stringCalculator(this.resultScreen);
+        break;
+      case 'x':
+        this.resultScreen = this.resultScreen + '*';
+        break;
+      case '÷':
+        this.resultScreen = this.resultScreen + '/';
         break;
       default:
-        console.log(button.text);
         this.resultScreen = this.resultScreen + button.text;
-        console.log(this.resultScreen);
         break;
     }
-    // if(button.text=='C'){
-    //   this.resultScreen = "";
-    // }
-    // if(button.text=='='){
-    //   this.resultScreen = this.calculator.calculate(this.resultScreen);
-    // }
-    // console.log(button.text);
-    // this.resultScreen = this.resultScreen + button.text;
-    // console.log(this.resultScreen);
 }
 }

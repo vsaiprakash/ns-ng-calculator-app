@@ -3,7 +3,7 @@
 <GridLayout columns="*, *, *, *" rows="*, *, *, *, *" 
     borderColor="white" borderWidth="2px" borderRadius="300px">
   <TextField id="resultBox" [(ngModel)]='this.resultScreen' row="0" col="0" colSpan="4" margin={{customMargin}} 
-      borderRadius={{customBorderRadius}}></TextField>
+      borderRadius={{customBorderRadius}} editable="false"></TextField>
 
   <Button id="seven" text="7" row="1" col="0" backgroundColor={{cellColor1}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
