@@ -3,7 +3,7 @@ import { NativeScriptFormsModule, NativeScriptModule } from '@nativescript/angul
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { CalculatorComponent } from './item/calculator.component'
+import { CalculatorComponent } from './calculator/calculator.component'
 
 @NgModule({
   bootstrap: [AppComponent],
