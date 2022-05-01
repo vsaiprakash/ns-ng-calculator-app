@@ -38,35 +38,59 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
       borderRadius={{customBorderRadius}}></Label>
   <!-- <TextField row="0" col="0" colSpan="4" disabled></TextField> -->
 
-  <Label text="7" row="1" col="0" backgroundColor={{cellColor}} 
+  <!-- <Label text="7" row="1" col="0" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="8" row="1" col="1" backgroundColor={{cellColor}}
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="9" row="1" col="2" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="x" row="1" col="3" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label> -->
+  <Button id="seven" text="7" row="1" col="0" backgroundColor={{cellColor1}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="eight" text="8" row="1" col="1" backgroundColor={{cellColor2}}
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="nine" text="9" row="1" col="2" backgroundColor={{cellColor3}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="multiply" text="x" row="1" col="3" backgroundColor={{cellColor4}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 
-  <Label text="4" row="2" col="0" backgroundColor={{cellColor}} 
+  <!-- <Label text="4" row="2" col="0" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="5" row="2" col="1" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="6" row="2" col="2" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="-" row="2" col="3" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label> -->
+  <Button id="four" text="4" row="2" col="0" backgroundColor={{cellColor2}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="five" text="5" row="2" col="1" backgroundColor={{cellColor2}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="six" text="6" row="2" col="2" backgroundColor={{cellColor3}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="subtract" text="-" row="2" col="3" backgroundColor={{cellColor4}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 
-  <Label text="1" row="3" col="0" backgroundColor={{cellColor}} 
+  <!-- <Label text="1" row="3" col="0" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="2" row="3" col="1" backgroundColor={{cellColor}} 
       margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
   <Label text="3" row="3" col="2" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
-  <Label text="+" row="3" col="3" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label> -->
+  <Button id="one" text="1" row="3" col="0" backgroundColor={{cellColor3}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="two" text="2" row="3" col="1" backgroundColor={{cellColor3}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="three" text="3" row="3" col="2" backgroundColor={{cellColor3}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="add" text="+" row="3" col="3" backgroundColor={{cellColor4}}
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 
-  <Label text="0" row="4" col="0" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
-  <Label id="equalBox" text="=" row="4" col="1" colSpan="3" backgroundColor={{cellColor}} 
-      margin={{customMargin}} borderRadius={{customBorderRadius}}></Label>
+  <Button id="zero" text="0" row="4" col="0" backgroundColor={{cellColor4}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="equal" text="=" row="4" col="1" colSpan="2" backgroundColor={{equalBtnColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
+  <Button id="clear" text="C" row="4" col="3" backgroundColor={{clearColor}} 
+      margin={{customMargin}} borderRadius={{customBorderRadius}} (tap)="onTap($event)"></Button>
 </GridLayout>

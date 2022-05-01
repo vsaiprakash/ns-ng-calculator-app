@@ -6,10 +6,13 @@ Label {
     text-align: right;
 }
 
-#equalBox {
-    text-align: left;
+#seven, #eight, #nine, #multiply,
+#four, #five, #six, #subtract, 
+#one, #two, #three, #add,
+#zero, #equal, #clear {
+    height: auto;
 }
 
-Label:hover , Label:checked {
+Label:active , Label:checked {
     background-color: green;
 }
