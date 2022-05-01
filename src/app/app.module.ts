@@ -3,12 +3,12 @@ import { NativeScriptFormsModule, NativeScriptModule } from '@nativescript/angul
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { ItemsComponent } from './item/items.component'
+import { CalculatorComponent } from './item/calculator.component'
 
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule, NativeScriptFormsModule],
-  declarations: [AppComponent, ItemsComponent],
+  declarations: [AppComponent, CalculatorComponent],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
 })

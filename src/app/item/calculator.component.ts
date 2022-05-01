@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { Button, EventData } from '@nativescript/core';
+import { CalculatorService } from './calculator.service';
 
 @Component({
-  selector: 'ns-items',
-  templateUrl: './items.component.html',
-  styleUrls: ['./items.component.css']
+  selector: 'ns-calculator',
+  templateUrl: './calculator.component.html',
+  styleUrls: ['./calculator.component.css']
 })
-export class ItemsComponent implements OnInit {
+export class CalculatorComponent implements OnInit {
 
   cellColor1: string = "#e8e8e8";
   cellColor2: string = "#c7c7c7";
@@ -22,7 +23,7 @@ export class ItemsComponent implements OnInit {
 
   resultScreen: string = "";
 
-  constructor() {}
+  constructor(private calculator: CalculatorService) {}
 
   ngOnInit(): void {
   }
@@ -30,11 +31,14 @@ export class ItemsComponent implements OnInit {
   onTap(args: EventData) {
     let button = args.object as Button;
     // execute your custom logic here...
+    if(button.text=='C'){
+      this.resultScreen = "";
+    }
+    if(button.text=='='){
+      this.resultScreen = this.calculator.calculate(this.resultScreen);
+    }
     console.log(button.text);
     this.resultScreen = this.resultScreen + button.text;
     console.log(this.resultScreen);
-    if(button.text=='C' || button.text=='='){
-      this.resultScreen = "";
-    }
 }
 }
